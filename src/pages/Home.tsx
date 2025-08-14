@@ -1,27 +1,33 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import SocialMediaBar from '../components/SocialMediaBar';
-import { Typography } from '@mui/material';
+import { Box, Card, CardMedia, Typography } from '@mui/material';
+import background from '../assets/background.jpg';
 
 const Home: React.FC = () => {
   return (
-    <Container>
-      <Box alignContent='center' sx={{ flexGrow: 1 }}>
-        <Typography
-          variant='h4'
-          align='center'
-          paddingTop={10}
-          paddingBottom={25}
-        >
-          AV CREW CANADA
-        </Typography>
-      </Box>
+    <Card
+      sx={{
+        position: 'relative',
+        maxWidth: 1380,
+      }}
+    >
+      <CardMedia component='img' height='700' width='400' image={background} />
+      <Typography
+        variant='h4'
+        position='absolute'
+        top='25%'
+        left='38%'
+        // align='center'
+        bgcolor='none'
+      >
+        AV CREW CANADA
+      </Typography>
+
       {/* TODO: Probably references can go here in carousel style */}
-      <Box alignContent='center' sx={{ flexGrow: 1 }} paddingTop={20}>
+      <Box alignContent='center' top='80%' left='44%' position='absolute'>
         <SocialMediaBar isHome />
       </Box>
-    </Container>
+    </Card>
   );
 };
 

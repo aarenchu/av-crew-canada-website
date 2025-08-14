@@ -1,27 +1,25 @@
 import { Box, Grid, Typography } from '@mui/material';
 import AVStockImg from '../assets/AVStockImg.jpg';
-import { aboutInfo } from '../utils/retrieveInfo';
+import info from '../assets/info.json';
+
 const About: React.FC = () => {
   return (
-    <Grid container spacing={20}>
-      <Grid
+    <Grid container spacing={40}>
+      <Box
+        component='img'
         sx={{
-          width: '50%',
-          paddingLeft: 10,
+          height: 550,
+          // width: '40%',
+          paddingLeft: 20,
         }}
-      >
-        <Box
-          component='img'
-          sx={{ height: '100%', width: '100%', paddingLeft: 10 }}
-          src={AVStockImg}
-        />
-      </Grid>
-      <Grid container direction={'column'} spacing={3} paddingLeft={20}>
+        src={AVStockImg}
+      />
+      <Grid container direction={'column'} spacing={3}>
         <Grid>
           <Typography variant='h4'>About Us</Typography>
         </Grid>
         <Grid>
-          <Typography variant='body1'>{aboutInfo}</Typography>
+          <Typography variant='body1'>{info.about}</Typography>
         </Grid>
       </Grid>
     </Grid>

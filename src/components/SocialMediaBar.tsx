@@ -6,10 +6,17 @@ import XIcon from '@mui/icons-material/X';
 interface Props {
   isHome: boolean;
 }
+
 const SocialMediaBar: React.FC<Props> = ({ isHome }) => {
   const [alignment, setAlignment] = useState('flex-start');
   const [spacing, setSpacing] = useState({});
   const [columns, setColumns] = useState({});
+
+  const instagramLink = 'https://www.instagram.com/';
+  const fbLink = 'https://www.facebook.com/';
+  const xLink = 'https://x.com/';
+
+  const iconColour = isHome ? 'text.primary' : 'text.secondary';
 
   useEffect(() => {
     if (isHome) {
@@ -28,17 +35,35 @@ const SocialMediaBar: React.FC<Props> = ({ isHome }) => {
       justifyItems={alignment}
     >
       <Grid>
-        <IconButton aria-label='instagram' href='https://www.instagram.com/'>
+        <IconButton
+          aria-label='instagram'
+          href={instagramLink}
+          sx={{
+            color: iconColour,
+          }}
+        >
           <InstagramIcon />
         </IconButton>
       </Grid>
       <Grid>
-        <IconButton aria-label='facebook' href='https://www.facebook.com/'>
+        <IconButton
+          aria-label='facebook'
+          href={fbLink}
+          sx={{
+            color: iconColour,
+          }}
+        >
           <FacebookOutlinedIcon />
         </IconButton>
       </Grid>
       <Grid>
-        <IconButton aria-label='x-twitter' href='https://x.com/'>
+        <IconButton
+          aria-label='x-twitter'
+          href={xLink}
+          sx={{
+            color: iconColour,
+          }}
+        >
           <XIcon />
         </IconButton>
       </Grid>

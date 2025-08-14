@@ -1,35 +1,49 @@
 import { Grid, IconButton, Typography, SvgIconProps } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import React from 'react';
 
 interface Props {
   ServiceIcon: React.ComponentType<SvgIconProps>;
   label: string;
+  active: string;
 }
 
-const ServiceButton: React.FC<Props> = ({ ServiceIcon, label }) => {
+const ServiceButton: React.FC<Props> = ({ ServiceIcon, label, active }) => {
   const caption = label.toLowerCase().replace(' ', '-');
   return (
     <Grid>
-      <IconButton
-        aria-label={caption}
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
+      <NavHashLink
+        smooth
+        style={{
+          textDecoration: 'none',
         }}
-        component={RouterLink}
-        to={`/${caption}`}
+        to={`#${caption}`}
       >
-        <ServiceIcon />
-        <Typography
-          paddingTop={1}
-          variant='caption'
-          gutterBottom
-          sx={{ display: 'block' }}
+        <IconButton
+          aria-label={caption}
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+          }}
         >
-          {label}
-        </Typography>
-      </IconButton>
+          <ServiceIcon
+            sx={{
+              color: active === caption ? 'primary.contrastText' : '#fff',
+            }}
+          />
+          <Typography
+            paddingTop={1}
+            variant='caption'
+            gutterBottom
+            sx={{
+              display: 'block',
+              color: active === caption ? 'primary.contrastText' : '#fff',
+            }}
+          >
+            {label}
+          </Typography>
+        </IconButton>
+      </NavHashLink>
     </Grid>
   );
 };

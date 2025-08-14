@@ -1,10 +1,9 @@
-import { Box, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import SocialMediaBar from '../components/SocialMediaBar';
-import AVStockImg from '../assets/AVStockImg.jpg';
+// import AVStockImg from '../assets/AVStockImg.jpg';
+import info from '../assets/info.json';
 
 const Contact: React.FC = () => {
-  const phone = '(123) 456-7890';
-  const email = 'hello@reallygoodsite.com';
   return (
     <Grid container padding={5}>
       <Grid container direction={'column'} spacing={3}>
@@ -15,11 +14,15 @@ const Contact: React.FC = () => {
         </Grid>
         <Grid>
           <Typography variant='h6'>PHONE</Typography>
-          <Typography variant='body1'>{phone}</Typography>
+          <Typography variant='body1' color='text.secondary'>
+            {info.contact.phone}
+          </Typography>
         </Grid>
         <Grid>
           <Typography variant='h6'>EMAIL</Typography>
-          <Typography variant='body1'>{email}</Typography>
+          <Typography variant='body1' color='primary.contrastText'>
+            {info.contact.email}
+          </Typography>
         </Grid>
         <Grid>
           <Typography variant='h6'>SOCIAL</Typography>
@@ -27,11 +30,11 @@ const Contact: React.FC = () => {
         </Grid>
       </Grid>
       <Grid>
-        <Box
-          component='img'
-          sx={{ height: '100%', width: '100%', paddingLeft: 10 }}
-          src={AVStockImg}
-        />
+        {/* <Box
+              component='img'
+              sx={{ height: '100%', width: '100%', paddingLeft: 10 }}
+              src={AVStockImg}
+            /> */}
       </Grid>
     </Grid>
   );
