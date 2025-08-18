@@ -17,9 +17,11 @@ const AVServices: React.FC = () => {
       </Typography>
       <Grid
         container
-        sx={{ transform: 'translateX(1.5%)' }}
+        justifyContent='center'
+        alignItems='center'
+        style={{ minHeight: '50vh' }}
         spacing={3}
-        minHeight={500}
+        // minHeight={500}
       >
         <ServiceCard
           title={'Conferences'}

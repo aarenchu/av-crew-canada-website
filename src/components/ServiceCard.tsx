@@ -25,7 +25,7 @@ const ServiceCard: React.FC<Props> = ({ title, description, image }) => {
           >
             {title}
           </Typography>
-          <Typography variant='body2' sx={{ color: 'white' }}>
+          <Typography variant='body1' sx={{ color: 'white' }}>
             {description}
           </Typography>
         </CardContent>

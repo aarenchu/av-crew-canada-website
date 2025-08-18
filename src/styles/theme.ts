@@ -22,9 +22,18 @@ const theme = createTheme({
     },
   },
   typography: {
+    h4: {
+      fontFamily: ['Orbitron Variable', 'sans-serif'].join(','),
+    },
+    h5: {
+      fontFamily: ['Orbitron Variable', 'sans-serif'].join(','),
+    },
     h6: {
       fontFamily: ['Orbitron Variable', 'sans-serif'].join(','),
     },
+    // body2: {
+    //   fontFamily: ['Orbitron Variable', 'sans-serif'].join(','),
+    // },
   },
   // Add more customizations here (typography, components, etc.)
 });
