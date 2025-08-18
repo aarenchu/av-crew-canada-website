@@ -31,6 +31,9 @@ const theme = createTheme({
     h6: {
       fontFamily: ['Orbitron Variable', 'sans-serif'].join(','),
     },
+    caption: {
+      fontFamily: ['Orbitron Variable', 'sans-serif'].join(','),
+    },
     // body2: {
     //   fontFamily: ['Orbitron Variable', 'sans-serif'].join(','),
     // },
