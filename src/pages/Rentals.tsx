@@ -1,10 +1,6 @@
-import { Typography } from '@mui/material';
+import ImageListPage from '../components/ImageListPage';
 
 const Rentals: React.FC = () => {
-  return (
-    <Typography variant='h4' align='center'>
-      Rentals
-    </Typography>
-  );
+  return <ImageListPage title='Rentals' />;
 };
 export default Rentals;

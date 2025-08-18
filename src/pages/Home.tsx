@@ -8,23 +8,28 @@ const Home: React.FC = () => {
     <Card
       sx={{
         position: 'relative',
-        maxWidth: 1380,
+        alignContent: 'center',
       }}
     >
-      <CardMedia component='img' height='700' width='400' image={background} />
+      <CardMedia component='img' height='720' image={background} />
       <Typography
         variant='h4'
         position='absolute'
-        top='25%'
-        left='38%'
-        // align='center'
+        top='40%'
+        left='50%'
+        sx={{ transform: 'translate(-50%, -50%)' }}
         bgcolor='none'
       >
         AV CREW CANADA
       </Typography>
 
-      {/* TODO: Probably references can go here in carousel style */}
-      <Box alignContent='center' top='80%' left='44%' position='absolute'>
+      <Box
+        alignContent='center'
+        top='80%'
+        left='50%'
+        position='absolute'
+        sx={{ transform: 'translate(-50%, -50%)' }}
+      >
         <SocialMediaBar isHome />
       </Box>
     </Card>

@@ -1,25 +1,22 @@
 import { Box, Grid, Typography } from '@mui/material';
-import AVStockImg from '../assets/AVStockImg.jpg';
-import info from '../assets/info.json';
+import { aboutInfo, avCrew } from '../utils/retrieveInfo';
 
 const About: React.FC = () => {
   return (
-    <Grid container spacing={40}>
+    <Grid container spacing={40} minHeight={550}>
       <Box
         component='img'
-        sx={{
-          height: 550,
-          // width: '40%',
-          paddingLeft: 20,
-        }}
-        src={AVStockImg}
+        height={650}
+        paddingLeft={20}
+        // sx={{ transform: 'translate(50%, 50%)' }}
+        src={avCrew}
       />
-      <Grid container direction={'column'} spacing={3}>
+      <Grid container direction={'column'} spacing={3} paddingLeft={30}>
         <Grid>
           <Typography variant='h4'>About Us</Typography>
         </Grid>
         <Grid>
-          <Typography variant='body1'>{info.about}</Typography>
+          <Typography variant='body1'>{aboutInfo}</Typography>
         </Grid>
       </Grid>
     </Grid>

@@ -1,11 +1,11 @@
 import { Grid, Typography } from '@mui/material';
 import SocialMediaBar from '../components/SocialMediaBar';
 // import AVStockImg from '../assets/AVStockImg.jpg';
-import info from '../assets/info.json';
+import { contactInfo } from '../utils/retrieveInfo';
 
 const Contact: React.FC = () => {
   return (
-    <Grid container padding={5}>
+    <Grid container paddingX={5}>
       <Grid container direction={'column'} spacing={3}>
         <Grid>
           <Typography variant='h4'>
@@ -15,13 +15,13 @@ const Contact: React.FC = () => {
         <Grid>
           <Typography variant='h6'>PHONE</Typography>
           <Typography variant='body1' color='text.secondary'>
-            {info.contact.phone}
+            {contactInfo.phone}
           </Typography>
         </Grid>
         <Grid>
           <Typography variant='h6'>EMAIL</Typography>
           <Typography variant='body1' color='primary.contrastText'>
-            {info.contact.email}
+            {contactInfo.email}
           </Typography>
         </Grid>
         <Grid>

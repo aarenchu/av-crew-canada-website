@@ -4,16 +4,16 @@ import React from 'react';
 interface Props {
   title: string;
   description: string;
+  image: string;
 }
 
-const ServiceCard: React.FC<Props> = ({ title, description }) => {
-  const imgSrc = '';
+const ServiceCard: React.FC<Props> = ({ title, description, image }) => {
   return (
     <Grid>
-      <Card sx={{ height: 400, width: 220 }}>
+      <Card sx={{ height: 450, width: 350 }}>
         <CardMedia
-          sx={{ height: 200 }}
-          image={imgSrc}
+          sx={{ height: 250 }}
+          image={image}
           title={title.toLowerCase().replace(' ', '-')}
         />
         <CardContent>

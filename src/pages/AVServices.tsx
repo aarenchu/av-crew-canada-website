@@ -1,9 +1,15 @@
 import { Grid, Typography } from '@mui/material';
 import ServiceCard from '../components/ServiceCard';
-import info from '../assets/info.json';
+import {
+  avServicesInfo,
+  conferenceImg,
+  concertImg,
+  weddingImg,
+  retreatImg,
+  livestreamImg,
+} from '../utils/retrieveInfo';
 
 const AVServices: React.FC = () => {
-  const avServices = info['av-services'];
   return (
     <>
       <Typography variant='h4' align='center' paddingBottom={5}>
@@ -11,26 +17,34 @@ const AVServices: React.FC = () => {
       </Typography>
       <Grid
         container
-        paddingLeft={27}
-        paddingRight={25}
+        sx={{ transform: 'translateX(1.5%)' }}
         spacing={3}
-        height={500}
+        minHeight={500}
       >
         <ServiceCard
           title={'Conferences'}
-          description={avServices.conferences.description}
+          description={avServicesInfo.conferences}
+          image={conferenceImg}
         />
         <ServiceCard
           title={'Concerts'}
-          description={avServices.concerts.description}
+          image={concertImg}
+          description={avServicesInfo.concerts}
         />
         <ServiceCard
+          image={weddingImg}
           title={'Weddings'}
-          description={avServices.weddings.description}
+          description={avServicesInfo.weddings}
         />
         <ServiceCard
+          title={'Retreats'}
+          image={retreatImg}
+          description={avServicesInfo.retreats}
+        />
+        <ServiceCard
+          image={livestreamImg}
           title={'Livestream'}
-          description={avServices.livestream.description}
+          description={avServicesInfo.livestream}
         />
       </Grid>
     </>

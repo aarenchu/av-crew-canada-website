@@ -4,11 +4,9 @@ import About from './pages/About';
 import AVServices from './pages/AVServices';
 import Installation from './pages/Installation';
 import Rentals from './pages/Rentals';
-// import DJServices from './pages/DJServices';
 import Contact from './pages/Contact';
 import Header from './components/Header';
 import Section from './components/Section';
-// import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   const [visibleSection, setVisibleSection] = useState('home');
@@ -30,11 +28,9 @@ const App: React.FC = () => {
       <Section id='rentals' setVisibleSection={setVisibleSection}>
         <Rentals />
       </Section>
-      {/* <DJServices /> */}
       <Section id='contact-us' setVisibleSection={setVisibleSection}>
         <Contact />
       </Section>
-      {/* <ScrollToTop /> */}
     </div>
   );
 };

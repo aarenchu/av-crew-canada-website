@@ -1,6 +1,5 @@
 import React from 'react';
 import { AppBar, Grid, Toolbar } from '@mui/material';
-// import HeadphonesOutlinedIcon from '@mui/icons-material/HeadphonesOutlined';
 import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
 import SpeakerOutlinedIcon from '@mui/icons-material/SpeakerOutlined';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
@@ -16,7 +15,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ visibleSection }) => {
   return (
     <header id='home'>
-      <AppBar position='fixed'>
+      <AppBar position='fixed' color='info'>
         <Toolbar
           sx={{
             justifyContent: 'center',
@@ -54,7 +53,6 @@ const Header: React.FC<HeaderProps> = ({ visibleSection }) => {
               label='Rentals'
               active={visibleSection}
             />
-            {/* <ServiceButton ServiceIcon={HeadphonesOutlinedIcon} label='DJ' /> */}
             <ServiceButton
               ServiceIcon={AlternateEmailOutlinedIcon}
               label='Contact Us'
