@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/av-crew-canada-website/static/css/main.63b50273.css",
-    "main.js": "/av-crew-canada-website/static/js/main.74c199f6.js",
+    "main.js": "/av-crew-canada-website/static/js/main.9a0be954.js",
     "static/js/453.270f349c.chunk.js": "/av-crew-canada-website/static/js/453.270f349c.chunk.js",
     "static/media/FRPAVRack.jpg": "/av-crew-canada-website/static/media/FRPAVRack.a7ff3892222c16fa148d.jpg",
     "static/media/SecurityCamera.jpg": "/av-crew-canada-website/static/media/SecurityCamera.4775f1fdce64a2497205.jpg",
@@ -23,11 +23,11 @@
     "static/media/orbitron-latin-wght-normal.woff2": "/av-crew-canada-website/static/media/orbitron-latin-wght-normal.9b7277a5df5346e3b65d.woff2",
     "index.html": "/av-crew-canada-website/index.html",
     "main.63b50273.css.map": "/av-crew-canada-website/static/css/main.63b50273.css.map",
-    "main.74c199f6.js.map": "/av-crew-canada-website/static/js/main.74c199f6.js.map",
+    "main.9a0be954.js.map": "/av-crew-canada-website/static/js/main.9a0be954.js.map",
     "453.270f349c.chunk.js.map": "/av-crew-canada-website/static/js/453.270f349c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.63b50273.css",
-    "static/js/main.74c199f6.js"
+    "static/js/main.9a0be954.js"
   ]
 }
