@@ -1,6 +1,5 @@
 import { Grid, Typography } from '@mui/material';
 import SocialMediaBar from '../components/SocialMediaBar';
-// import AVStockImg from '../assets/AVStockImg.jpg';
 import { contactInfo } from '../utils/retrieveInfo';
 
 const Contact: React.FC = () => {

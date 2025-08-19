@@ -1,37 +1,49 @@
 {
   "socials": {
-    "facebook": "",
-    "instagram": "",
-    "x-twitter": ""
+    "facebook": "avcrewcanada",
+    "instagram": "avcrewcanada",
+    "linkedin": "ryan-seucharan"
   },
-  "about": "about description",
+  "about": "We are a Mississauga based audiovisual company primarily serving the Greater Toronto Area, but open to serving other parts of Ontario. After working at the Peel District School Board for 23 years, Bertram Seucharan retired and then started the business known as AV Crew Canada today. In 2022, his son, Ryan Seucharan, succeeded in leading the company. We have done many projects in schools, churches and government buildings; in addition, we have worked with many private companies. We will provide the highest quality service for all your audiovisual needs.",
   "av-services": {
-    "conferences": "conference description",
-    "concerts": "concert description",
-    "weddings": "wedding description",
-    "retreats": "retreats description",
-    "livestream": "livestream description"
+    "conferences": "We provide screens, projectors, lighting, and sound for conferences. In the past, we have helped with conferences with up to 1000 attendees.",
+    "concerts": "We have lights, microphones, in-ear monitors, subwoofers, and other equipment for live performances.",
+    "weddings": "We offer sound, visuals, lighting and livestreaming for wedding ceremonies and/or receptions.",
+    "retreats": "We will provide comprehensive audiovisual systems for your retreat, including worship bands, guest speakers and breakout rooms. ",
+    "livestream": "We can provide professional Livestreaming with high quality cameras, switchers and quality sound streaming to most platforms."
   },
   "rentals": [
-    { "name": "Speakers", "caption": "Speaker stands available upon request" },
-    { "name": "Teleprompter", "caption": "Assembly required" },
+    {
+      "name": "Speakers",
+      "caption": "Active and Passive speakers available from 8 inches to 12 inches. Speaker stands available upon request"
+    },
+    {
+      "name": "Teleprompter",
+      "caption": "Includes setup/teardown and laptop with scrolling software"
+    },
     {
       "name": "Lights",
       "caption": "Types of lights: disco balls, led light stands, spotlights, flood lights, floor lights"
     },
-    { "name": "TVs", "caption": "Moveable TV stands available upon request" },
+    {
+      "name": "TVs",
+      "caption": "50 inch, 55 inch and 60 inch with moveable stands"
+    },
 
     {
       "name": "Microphones",
-      "caption": "Wired or wireless handheld microphones, "
+      "caption": "Wired or wireless handheld and headset microphones. Stands available upon request"
     },
 
     {
       "name": "Projectors/Projector Screens",
-      "caption": "Projector screen sizes available: 10', 14', ."
+      "caption": "16:9 Projector screen sizes available: 8', 10', 16'."
     },
 
-    { "name": "Mixers", "caption": "Types" }
+    {
+      "name": "Mixers",
+      "caption": "Analog or digital available. 8-48 channels"
+    }
   ],
   "contact": {
     "phone": "(647) 273-1938",

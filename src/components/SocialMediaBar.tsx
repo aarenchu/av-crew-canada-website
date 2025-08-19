@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Grid, IconButton } from '@mui/material';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import XIcon from '@mui/icons-material/X';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { socialsInfo } from '../utils/retrieveInfo';
 interface Props {
   isHome: boolean;
 }
@@ -12,9 +13,9 @@ const SocialMediaBar: React.FC<Props> = ({ isHome }) => {
   const [spacing, setSpacing] = useState({});
   const [columns, setColumns] = useState({});
 
-  const instagramLink = 'https://www.instagram.com/';
-  const fbLink = 'https://www.facebook.com/';
-  const xLink = 'https://x.com/';
+  const instagramLink = `https://www.instagram.com/${socialsInfo.instagram}`;
+  const fbLink = `https://www.facebook.com/${socialsInfo.facebook}`;
+  const linkedInLink = `https://www.linkedin.com/in/${socialsInfo.linkedin}/`;
 
   const iconColour = isHome ? 'text.primary' : 'text.secondary';
 
@@ -58,13 +59,13 @@ const SocialMediaBar: React.FC<Props> = ({ isHome }) => {
       </Grid>
       <Grid>
         <IconButton
-          aria-label='x-twitter'
-          href={xLink}
+          aria-label='linkedin'
+          href={linkedInLink}
           sx={{
             color: iconColour,
           }}
         >
-          <XIcon />
+          <LinkedInIcon />
         </IconButton>
       </Grid>
     </Grid>

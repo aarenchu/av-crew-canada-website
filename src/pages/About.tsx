@@ -1,17 +1,31 @@
-import { Box, Grid, Typography } from '@mui/material';
-import { aboutInfo, avCrew } from '../utils/retrieveInfo';
+import { Grid, ImageList, ImageListItem, Typography } from '@mui/material';
+import { aboutInfo, avCrewImages } from '../utils/retrieveInfo';
+import { srcset } from '../utils/helperFunctions';
 
 const About: React.FC = () => {
   return (
-    <Grid container spacing={40} minHeight={550} justifyContent='center'>
-      <Box
-        component='img'
-        height={650}
-        // paddingLeft={20}
-        // sx={{ transform: 'translate(50%, 50%)' }}
-        src={avCrew}
-      />
-      <Grid container direction={'column'} spacing={3} paddingLeft={20}>
+    <Grid container spacing={20} minHeight={550} justifyContent='center'>
+      <ImageList
+        // sx={{ paddingX: 5 }}
+        variant='quilted'
+        cols={4}
+        rowHeight={175}
+      >
+        {avCrewImages.map((item) => (
+          <ImageListItem
+            key={item.img}
+            cols={item.cols || 1}
+            rows={item.rows || 1}
+          >
+            <img
+              {...srcset(item.img, 150, item.rows, item.cols)}
+              alt={item.title}
+              loading='lazy'
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+      <Grid container direction={'column'} spacing={3} width={'35%'}>
         <Grid>
           <Typography variant='h4'>About Us</Typography>
         </Grid>

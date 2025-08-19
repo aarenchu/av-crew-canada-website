@@ -1,4 +1,5 @@
 import info from '../assets/info.json';
+import bert from '../assets/Bert.jpg';
 import theCrew from '../assets/avcrew.jpg';
 import conferencesImage from '../assets/Conference.jpg';
 import concertsImage from '../assets/Concert.jpg';
@@ -15,10 +16,26 @@ import securityCamera from '../assets/SecurityCamera.jpg';
 import intLights from '../assets/CapitolLights.jpg';
 import cSpeakers from '../assets/CapitolSpeakers.jpg';
 
+/** SOCIAL MEDIA */
+export const socialsInfo = info.socials;
+
 /** ABOUT */
 export const aboutInfo = info.about;
-// about image
-export const avCrew = theCrew;
+// about images
+export const avCrewImages = [
+  {
+    img: bert,
+    title: 'LED Screens (Evangel Temple Toronto)',
+    rows: 3,
+    cols: 2,
+  },
+  {
+    img: theCrew,
+    title: 'Projector Screen (Fellowship Church Rouge Park)',
+    rows: 3,
+    cols: 2,
+  },
+];
 
 /** AV SERVICES */
 export const avServicesInfo = info['av-services'];
