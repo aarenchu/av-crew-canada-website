@@ -1,16 +1,11 @@
 import { Grid, ImageList, ImageListItem, Typography } from '@mui/material';
-import { aboutInfo, avCrewImages } from '../utils/retrieveInfo';
-import { srcset } from '../utils/helperFunctions';
+import { aboutInfo, avCrewImages } from '../../utils/retrieveInfo';
+import { srcset } from '../../utils/helperFunctions';
 
-const About: React.FC = () => {
+const DesktopAbout: React.FC = () => {
   return (
     <Grid container spacing={20} minHeight={550} justifyContent='center'>
-      <ImageList
-        // sx={{ paddingX: 5 }}
-        variant='quilted'
-        cols={4}
-        rowHeight={175}
-      >
+      <ImageList variant='quilted' cols={4} rowHeight={175}>
         {avCrewImages.map((item) => (
           <ImageListItem
             key={item.img}
@@ -36,4 +31,4 @@ const About: React.FC = () => {
     </Grid>
   );
 };
-export default About;
+export default DesktopAbout;

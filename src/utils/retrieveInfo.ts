@@ -25,15 +25,26 @@ export const aboutInfo = info.about;
 export const avCrewImages = [
   {
     img: bert,
-    title: 'LED Screens (Evangel Temple Toronto)',
+    title: 'Bertram Seucharan',
     rows: 3,
     cols: 2,
   },
   {
     img: theCrew,
-    title: 'Projector Screen (Fellowship Church Rouge Park)',
+    title: 'AV Crew Canada',
     rows: 3,
     cols: 2,
+  },
+];
+
+export const avCrewImagesMobile = [
+  {
+    img: bert,
+    title: 'Bertram Seucharan',
+  },
+  {
+    img: theCrew,
+    title: 'AV Crew Canada',
   },
 ];
 

@@ -60,7 +60,9 @@ const RentalItem: React.FC<Props> = ({ RentalIcon, name, color, caption }) => {
             }}
           />
         </Avatar>
-        <Typography variant='body1'>{name}</Typography>
+        <Typography variant='body1' maxWidth='96px'>
+          {name}
+        </Typography>
       </Box>
       <Popover
         id='mouse-over-popover'

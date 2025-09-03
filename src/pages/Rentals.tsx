@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@mui/material';
+import { Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import SpeakerIcon from '@mui/icons-material/Speaker';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import FluorescentIcon from '@mui/icons-material/Fluorescent';
@@ -10,6 +10,9 @@ import RentalItem from '../components/RentalItem';
 import { rentalCaptions } from '../utils/retrieveInfo';
 
 const Rentals: React.FC = () => {
+  // for smaller screens
+  const theme = useTheme();
+  const isSmallerScreen = useMediaQuery(theme.breakpoints.down('md'));
   const getIcon = (name: string) => {
     switch (name) {
       case 'Speakers':
@@ -24,6 +27,7 @@ const Rentals: React.FC = () => {
         return MicIcon;
       case 'Mixers':
         return TuneIcon;
+      // Projectors / Projector Screen
       default:
         return WebAssetIcon;
     }
@@ -31,7 +35,11 @@ const Rentals: React.FC = () => {
   const colors = ['background.paper', 'primary.contrastText', 'primary.main'];
   return (
     <>
-      <Typography variant='h4' align='center'>
+      <Typography
+        variant='h4'
+        align='center'
+        paddingBottom={isSmallerScreen ? 5 : 0}
+      >
         Rentals
       </Typography>
       <Grid

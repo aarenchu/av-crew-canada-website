@@ -39,6 +39,15 @@ const theme = createTheme({
     // },
   },
   // Add more customizations here (typography, components, etc.)
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 900,
+      md: 1094,
+      lg: 1486,
+      xl: 1536,
+    },
+  },
 });
 
 export default theme;

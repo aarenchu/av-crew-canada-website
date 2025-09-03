@@ -3,11 +3,15 @@ import {
   ImageListItem,
   ImageListItemBar,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material';
 import { srcset } from '../utils/helperFunctions';
 import { installationImages } from '../utils/retrieveInfo';
 
 const Installation: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const itemData = installationImages;
 
   const imgListRowSize = 121;
@@ -17,10 +21,15 @@ const Installation: React.FC = () => {
         Installation
       </Typography>
       <ImageList
-        sx={{ alignSelf: 'center', height: 470, paddingX: 20, paddingTop: 5 }}
-        variant='quilted'
-        cols={4}
-        rowHeight={imgListRowSize}
+        sx={{
+          alignSelf: isMobile ? 'auto' : 'center',
+          height: isMobile ? 'auto' : 470,
+          paddingX: isMobile ? 5 : 20,
+          paddingTop: 5,
+        }}
+        variant={isMobile ? 'standard' : 'quilted'}
+        cols={isMobile ? 1 : 4}
+        rowHeight={isMobile ? 'auto' : imgListRowSize}
       >
         {itemData.map((item) => (
           <ImageListItem
@@ -45,11 +54,16 @@ const Installation: React.FC = () => {
                 opacity: 1,
               },
             }}
-            cols={item.cols || 1}
-            rows={item.rows || 1}
+            cols={isMobile ? 1 : item.cols}
+            rows={isMobile ? 1 : item.rows}
           >
             <img
-              {...srcset(item.img, imgListRowSize, item.rows, item.cols)}
+              {...srcset(
+                item.img,
+                isMobile ? 1 : imgListRowSize,
+                item.rows,
+                item.cols
+              )}
               alt={item.title}
               loading='lazy'
             />
