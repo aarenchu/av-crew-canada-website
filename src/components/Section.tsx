@@ -10,7 +10,7 @@ interface Props {
 
 const Section: React.FC<Props> = ({ id, children, setVisibleSection }) => {
   const { ref } = useInView({
-    threshold: 0.5, // Trigger when 50% of the section is visible
+    threshold: 0.125, // Trigger when 12.5% of the section is visible
     onChange: (inView, entry) => {
       if (inView) {
         setVisibleSection(entry.target.id);
