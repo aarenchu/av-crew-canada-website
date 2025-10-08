@@ -17,8 +17,12 @@ const Installation: React.FC = () => {
   const imgListRowSize = 121;
   return (
     <>
-      <Typography variant='h4' align='center'>
+      <Typography variant='h4' align='center' paddingBottom={3}>
         Installation
+      </Typography>
+      <Typography variant='body1' align='center'>
+        Please {isMobile ? 'tap on' : 'hover your mouse over'} each image for
+        more information.
       </Typography>
       <ImageList
         sx={{

@@ -11,10 +11,12 @@ const ServiceCard: React.FC<Props> = ({ title, description, image }) => {
   return (
     <Grid>
       <Card sx={{ height: 450, width: 350 }}>
+        {/* @ts-ignore */}
         <CardMedia
           sx={{ height: 250 }}
           image={image}
           title={title.toLowerCase().replace(' ', '-')}
+          alt={title}
         />
         <CardContent>
           <Typography

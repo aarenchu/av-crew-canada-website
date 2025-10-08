@@ -13,6 +13,8 @@ const Rentals: React.FC = () => {
   // for smaller screens
   const theme = useTheme();
   const isSmallerScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   const getIcon = (name: string) => {
     switch (name) {
       case 'Speakers':
@@ -35,12 +37,16 @@ const Rentals: React.FC = () => {
   const colors = ['background.paper', 'primary.contrastText', 'primary.main'];
   return (
     <>
+      <Typography variant='h4' align='center' paddingBottom={3}>
+        Rentals
+      </Typography>
       <Typography
-        variant='h4'
+        variant='body1'
         align='center'
         paddingBottom={isSmallerScreen ? 5 : 0}
       >
-        Rentals
+        Please {isMobile ? 'tap on' : 'hover your mouse over'} each icon for
+        more information.
       </Typography>
       <Grid
         container
